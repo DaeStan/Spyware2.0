@@ -11,9 +11,9 @@ public class DisplayHand : MonoBehaviour
     GameObject comButton;
 
     public static DisplayHand instance;
-    void Awake() 
-    { 
-        instance = this; 
+    void Awake()
+    {
+        instance = this;
     }
     public void DisplayPLayerHand(int[] playerHand, Dictionary<string, int> deck)
     {

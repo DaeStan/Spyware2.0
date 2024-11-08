@@ -4,79 +4,83 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class PlayerController : MonoBehaviour
 {
     public int id;
-    public int cardindex;
 
-    bool activePlayer = false;
     bool canWin = false;
 
     int cardPlayed;
 
-    int currentWinningCard;
-
     int[] currentPlayerHand;
 
-    void CheckForWinningCard()
+    int winningCard = -1;
+
+    void CheckForWinningCondition()
     {
 
-        if (CardManager.instance.winningcard == cardPlayed)
+        if (winningCard == cardPlayed)
         {
             canWin = true;
         }
     }
 
-    public void PlayerTurn()
+    public void ClickedCard()
     {
-        currentPlayerHand = CardManager.instance.currentPlayerHansds[id];
-        currentWinningCard = CardManager.instance.winningcard;
-
-        if (id == 1 && canWin == false)
-        {
-            Debug.Log("this is the first turn player 1 may start...");
-            activePlayer = true;
-        }
-
-        for (int i = 0; i < currentPlayerHand.Length; i++)
-        {
-            if (currentPlayerHand[i] == currentWinningCard && canWin == true)
-            {
-                Debug.Log("Player " + id + " has WON!!!!!!!!!!!!!!!!!!!!!!");
-            }
-        }
-        if (activePlayer == true)
-        {
-            string selectedCard = EventSystem.current.currentSelectedGameObject.name;
-            Debug.Log(id + ": " + selectedCard);
-            if (currentWinningCard == -1)
-            {
-                currentWinningCard = (int)Char.GetNumericValue(selectedCard[0]);
-                Debug.Log("Player " + id + " choose: " + currentWinningCard);
-            }
-            else
-            {
-                Debug.Log("in else");
-                //pass card to next player
-                cardPlayed = (int)Char.GetNumericValue(selectedCard[0]);
-                CheckForWinningCard();
-                Debug.Log("PlayerTurn Id: " + id);
-                int nextPlayer = CardManager.instance.PassCard(id, cardPlayed);
-
-                activePlayer = false;
-                id = nextPlayer;
-            }
-        }
+        PlayerTurn(id, winningCard, canWin);
     }
 
-    public void ComPlayers()
+    public void PlayerTurn(int currentPlayerId, int currentPlayerWinningCard, bool currentPlayerWinCondtion)
     {
-        //will add code for ai (players 2-4) later
-        if (id == 2 || id == 3 || id == 4)
+        //checks if players turn
+        //if (id == currentPlayerId) return;
+
+        string selectedCard = EventSystem.current.currentSelectedGameObject.name;
+        currentPlayerHand = CardManager.instance.currentPlayerHands[1];
+
+        //Debug.Log("Click Worked");
+        //Debug.Log("Current Player ID: " + currentPlayerId);
+        Debug.Log(currentPlayerId + ": " + selectedCard);
+
+
+        //checks for first turn
+        if (currentPlayerWinningCard == -1)
         {
-            cardindex = UnityEngine.Random.Range(0, 9);
-            //add a way for the ai to pick the winning card
-            CardManager.instance.ComTurn(id, cardindex);
+            //checks if player
+            if (currentPlayerId == 1)
+            {
+                winningCard = (int)Char.GetNumericValue(selectedCard[0]);
+
+            }
+            
+            Debug.Log("this is the first turn player 1 may start...");
+            Debug.Log("Player " + currentPlayerId + " choose as winning card: " + winningCard);
+            return;
         }
+
+        //checks for winning card in hand
+        for (int i = 0; i < currentPlayerHand.Length; i++)
+        {
+            if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
+            {
+                Debug.Log("Player " + currentPlayerId + " has WON!!!!!!!!!!!!!!!!!!!!!!");
+            }
+        }
+
+        //passes card to next player
+        //checks if player
+        if (currentPlayerId == 1)
+        {
+            cardPlayed = (int)Char.GetNumericValue(selectedCard[0]);
+        }
+
+        Debug.Log("PlayerTurn Id: " + currentPlayerId);
+        int nextPlayer = CardManager.instance.PassCard(currentPlayerId, cardPlayed);
+        currentPlayerId = nextPlayer;
+        Debug.Log("Next Player id: " + currentPlayerId);
+
+
+        CheckForWinningCondition();
     }
 }
