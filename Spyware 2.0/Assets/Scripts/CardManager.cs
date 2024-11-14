@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 public class CardManager : MonoBehaviour
 {
     public static int maxCardsForHand = 3;
@@ -88,7 +85,7 @@ public class CardManager : MonoBehaviour
         currentPlayerHand = currentPlayerHands[currentPlayerId];
 
         //finds next players id
-        if (currentPlayerId + 1 > numberOfPlayers)
+        if (currentPlayerId + 1 == numberOfPlayers + 1)
         {
             nextPlayerHand = currentPlayerHands[1];
             nextPlayerId = 1;

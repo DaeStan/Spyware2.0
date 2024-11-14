@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
 
     int winningCard = -1;
 
+    int nextPlayer = 1;
+
+    int comCard = 0;
+
     void CheckForWinningCondition()
     {
 
@@ -28,45 +32,46 @@ public class PlayerController : MonoBehaviour
 
     public void ClickedCard()
     {
-        PlayerTurn(id, winningCard, canWin);
+        PlayerTurn(id, winningCard, canWin, comCard);
     }
 
-    public void PlayerTurn(int currentPlayerId, int currentPlayerWinningCard, bool currentPlayerWinCondtion)
+    public void PlayerTurn(int currentPlayerId, int currentPlayerWinningCard, bool currentPlayerWinCondtion, int comPassCard)
     {
         //checks if players turn
-        //if (id == currentPlayerId) return;
+       // if (nextPlayer == currentPlayerId)
+        //{
 
-        string selectedCard = EventSystem.current.currentSelectedGameObject.name;
-        currentPlayerHand = CardManager.instance.currentPlayerHands[1];
+            string selectedCard = EventSystem.current.currentSelectedGameObject.name;
+            currentPlayerHand = CardManager.instance.currentPlayerHands[1];
 
-        //Debug.Log("Click Worked");
-        //Debug.Log("Current Player ID: " + currentPlayerId);
-        Debug.Log(currentPlayerId + ": " + selectedCard);
+            //Debug.Log("Click Worked");
+            //Debug.Log("Current Player ID: " + currentPlayerId);
+            Debug.Log(currentPlayerId + ": " + selectedCard);
 
 
-        //checks for first turn
-        if (currentPlayerWinningCard == -1)
-        {
-            //checks if player
-            if (currentPlayerId == 1)
+            //checks for first turn
+            if (currentPlayerWinningCard == -1)
             {
-                winningCard = (int)Char.GetNumericValue(selectedCard[0]);
+                //checks if player
+                if (currentPlayerId == 1)
+                {
+                    winningCard = (int)Char.GetNumericValue(selectedCard[0]);
 
+                }
+
+                Debug.Log("this is the first turn player 1 may start...");
+                Debug.Log("Player " + currentPlayerId + " choose as winning card: " + winningCard);
+                return;
             }
-            
-            Debug.Log("this is the first turn player 1 may start...");
-            Debug.Log("Player " + currentPlayerId + " choose as winning card: " + winningCard);
-            return;
-        }
 
-        //checks for winning card in hand
-        for (int i = 0; i < currentPlayerHand.Length; i++)
-        {
-            if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
+            //checks for winning card in hand
+            for (int i = 0; i < currentPlayerHand.Length; i++)
             {
-                Debug.Log("Player " + currentPlayerId + " has WON!!!!!!!!!!!!!!!!!!!!!!");
+                if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
+                {
+                    Debug.Log("Player " + currentPlayerId + " has WON!!!!!!!!!!!!!!!!!!!!!!");
+                }
             }
-        }
 
         //passes card to next player
         //checks if player
@@ -74,13 +79,18 @@ public class PlayerController : MonoBehaviour
         {
             cardPlayed = (int)Char.GetNumericValue(selectedCard[0]);
         }
+        else
+        {
+            cardPlayed = comPassCard;
+        }
 
-        Debug.Log("PlayerTurn Id: " + currentPlayerId);
-        int nextPlayer = CardManager.instance.PassCard(currentPlayerId, cardPlayed);
-        currentPlayerId = nextPlayer;
-        Debug.Log("Next Player id: " + currentPlayerId);
+            Debug.Log("PlayerTurn Id: " + currentPlayerId);
+            int nextPlayer = CardManager.instance.PassCard(currentPlayerId, cardPlayed);
+            currentPlayerId = nextPlayer;
+            Debug.Log("Next Player id: " + currentPlayerId);
 
 
-        CheckForWinningCondition();
+            CheckForWinningCondition();
+      //  }
     }
 }

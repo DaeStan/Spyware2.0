@@ -8,7 +8,9 @@ public class DisplayHand : MonoBehaviour
     string cardPrefabName;
     GameObject playerCanvas;
     GameObject cardDeck;
-    GameObject comButton;
+    GameObject comButton2;
+    GameObject comButton3;
+    GameObject comButton4;
 
     public static DisplayHand instance;
     void Awake()
@@ -19,7 +21,9 @@ public class DisplayHand : MonoBehaviour
     {
         playerCanvas = GameObject.Find("PlayerScreen");
         cardDeck = GameObject.Find("Deck");
-        comButton = GameObject.Find("COM");
+        comButton2 = GameObject.Find("COMButton2");
+        comButton3 = GameObject.Find("COMButton3");
+        comButton4 = GameObject.Find("COMButton4");
 
         //clearing cards 
         foreach (Transform child in playerCanvas.transform)
@@ -43,6 +47,8 @@ public class DisplayHand : MonoBehaviour
                 }
             }
         }
-        comButton.transform.SetParent(playerCanvas.transform, true);
+        comButton2.transform.SetParent(playerCanvas.transform, true);
+        comButton3.transform.SetParent(playerCanvas.transform, true);
+        comButton4.transform.SetParent(playerCanvas.transform, true);
     }
 }

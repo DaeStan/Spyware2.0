@@ -13,6 +13,8 @@ public class ComController : MonoBehaviour
     int comCardPlayed;
     int[] currentComHand;
 
+    int passCard;
+
     public int winningCard = -1;
 
     public void PickCard()
@@ -21,6 +23,9 @@ public class ComController : MonoBehaviour
         {
             Debug.Log("pickCard function...");
             cardindex = UnityEngine.Random.Range(0, 2);
+
+            currentComHand = CardManager.instance.currentPlayerHands[id];
+            passCard = currentComHand[cardindex];
         }
     }
 
@@ -47,6 +52,6 @@ public class ComController : MonoBehaviour
         Debug.Log("Random picked card number: " + cardindex);
 
         playerController = FindAnyObjectByType<PlayerController>();
-        playerController.PlayerTurn(id, winningCard, comCanWin);
+        playerController.PlayerTurn(id, winningCard, comCanWin, passCard);
     }
  }
