@@ -119,6 +119,11 @@ public class CardManager : MonoBehaviour
         return nextPlayerId;
     }
 
+    public void RedealCardsButton()
+    {
+        DisplayHand.instance.RedealCards(nextPlayerHand, cards);
+    }
+
     //Displaying lists
     void DisplayList(List<int> passingCard)
     {
