@@ -81,7 +81,7 @@ public class CardManager : MonoBehaviour
     {
         numberOfPlayers = 4; //might move this outside of functions later
 
-        Debug.Log("passCard playerID: " + currentPlayerId);
+        //Debug.Log("passCard playerID: " + currentPlayerId);
         currentPlayerHand = currentPlayerHands[currentPlayerId];
 
         //finds next players id
@@ -100,7 +100,7 @@ public class CardManager : MonoBehaviour
         passingCard = new List<int>(currentPlayerHand);
         passingCard.Remove(passedCard);
         passingCard.Add(0);
-        DisplayList(passingCard);
+        //DisplayList(passingCard);
         currentPlayerHand = passingCard.ToArray();
         currentPlayerHands[currentPlayerId] = currentPlayerHand; //may have to update this array for the id
 
@@ -111,7 +111,7 @@ public class CardManager : MonoBehaviour
             passingCard.Remove(0);
         }
         passingCard.Add(passedCard);
-        DisplayList(passingCard);
+        //DisplayList(passingCard);
         nextPlayerHand = passingCard.ToArray();
         currentPlayerHands[nextPlayerId] = nextPlayerHand;
         DisplayHand.instance.DisplayPLayerHand(nextPlayerHand, cards);

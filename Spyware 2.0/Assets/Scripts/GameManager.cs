@@ -11,8 +11,4 @@ public class GameManager : MonoBehaviour
         CardManager.instance.ShuffleDeck();
         CardManager.instance.DealCards(1);
     }
-
-    //track id 
-    //find game object
-    //call function on thatg com object
 }

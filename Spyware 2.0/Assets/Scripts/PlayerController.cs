@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerTurn(int currentPlayerId, int currentPlayerWinningCard, bool currentPlayerWinCondtion, int comPassCard)
     {
-        Debug.Log("-----------------------------------------------Current Player Id: " + currentPlayerId);
-        Debug.Log("-----------------------------------------------Next Player Id: " + nextPlayer);
+        //Debug.Log("-----------------------------------------------Current Player Id: " + currentPlayerId);
+        //Debug.Log("-----------------------------------------------Next Player Id: " + nextPlayer);
 
         //checks if players turn
         if (nextPlayer != currentPlayerId) { return; }
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
         //Debug.Log("Click Worked");
         //Debug.Log("Current Player ID: " + currentPlayerId);
-        Debug.Log(currentPlayerId + ": " + selectedCard);
+        //Debug.Log(currentPlayerId + ": " + selectedCard);
 
 
         //checks for first turn
@@ -62,8 +62,8 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            Debug.Log("this is the first turn player 1 may start...");
-            Debug.Log("Player " + currentPlayerId + " choose as winning card: " + winningCard);
+            //Debug.Log("this is the first turn player 1 may start...");
+            //Debug.Log("Player " + currentPlayerId + " choose as winning card: " + winningCard);
             return;
         }
 
@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
             if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
             {
                 Debug.Log("Player " + currentPlayerId + " has WON!!!!!!!!!!!!!!!!!!!!!!");
+                //add win screen
             }
         }
 
@@ -87,10 +88,10 @@ public class PlayerController : MonoBehaviour
             cardPlayed = comPassCard;
         }
 
-        Debug.Log("PlayerTurn Id: " + currentPlayerId);
+        //Debug.Log("PlayerTurn Id: " + currentPlayerId);
         nextPlayer = CardManager.instance.PassCard(currentPlayerId, cardPlayed);
         currentPlayerId = nextPlayer;
-        Debug.Log("Next Player id: " + currentPlayerId);
+        //Debug.Log("Next Player id: " + currentPlayerId);
 
 
         CheckForWinningCondition();
