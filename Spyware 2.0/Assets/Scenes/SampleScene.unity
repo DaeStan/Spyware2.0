@@ -170,6 +170,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &65196493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: 9585fd9766e195d46bd5d5acf3423889, type: 3}
+  m_PrefabInstance: {fileID: 130139412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &80398219
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,13 +335,90 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 9585fd9766e195d46bd5d5acf3423889, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 130139417}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 9585fd9766e195d46bd5d5acf3423889, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 130139418}
   m_SourcePrefab: {fileID: 100100000, guid: 9585fd9766e195d46bd5d5acf3423889, type: 3}
 --- !u!224 &130139413 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: 9585fd9766e195d46bd5d5acf3423889, type: 3}
   m_PrefabInstance: {fileID: 130139412}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &130139415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: 9585fd9766e195d46bd5d5acf3423889, type: 3}
+  m_PrefabInstance: {fileID: 130139412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65196493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &130139417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65196493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 130139415}
+  glitchSprite: {fileID: 21300000, guid: f6daf8ef3992f104492194198c981ce3, type: 3}
+  baseSprite: {fileID: 21300000, guid: be5bb913020fb8641aeced7dc6c0007f, type: 3}
+--- !u!114 &130139418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65196493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130139417}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130139417}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &134680756
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,13 +574,95 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 9e7243a279178fa428254de7021f1fc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 224070002}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 9e7243a279178fa428254de7021f1fc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 224070003}
   m_SourcePrefab: {fileID: 100100000, guid: 9e7243a279178fa428254de7021f1fc7, type: 3}
 --- !u!224 &176990895 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: 9e7243a279178fa428254de7021f1fc7, type: 3}
   m_PrefabInstance: {fileID: 176990894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &224069998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: 9e7243a279178fa428254de7021f1fc7, type: 3}
+  m_PrefabInstance: {fileID: 176990894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &224070000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: 9e7243a279178fa428254de7021f1fc7, type: 3}
+  m_PrefabInstance: {fileID: 176990894}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224069998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &224070002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224069998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 224070000}
+  glitchSprite: {fileID: 21300000, guid: bbf2b21dfc40f3848b03065b19555a4f, type: 3}
+  baseSprite: {fileID: 21300000, guid: 30b5d693337c76041b3ae23399d51854, type: 3}
+--- !u!114 &224070003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224069998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 224070002}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 224070002}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &285321281
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,13 +830,30 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4629358454356884748, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941784840}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941784841}
   m_SourcePrefab: {fileID: 100100000, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
 --- !u!224 &602299583 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
   m_PrefabInstance: {fileID: 602299582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &602299584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
+  m_PrefabInstance: {fileID: 602299582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941784836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1215,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737140104}
   m_CullTransparentMesh: 1
+--- !u!1 &896561589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: 9ad01bcc81031094f814b21144b3ad9a, type: 3}
+  m_PrefabInstance: {fileID: 1488022795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &941784836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: 19884fbb45fb8954ebea452cbae571ba, type: 3}
+  m_PrefabInstance: {fileID: 602299582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &941784840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941784836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 941784841}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 941784841}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &941784841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941784836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 602299584}
+  glitchSprite: {fileID: 21300000, guid: 8b043123ebd7fdb438e6975638009bd7, type: 3}
+  baseSprite: {fileID: 21300000, guid: e19e74f49face0e4b9b33813cabcff44, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,13 +1492,95 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: e11f20ef6b9639b4b811c8a9ffa41cb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 998062011}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: e11f20ef6b9639b4b811c8a9ffa41cb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 998062015}
   m_SourcePrefab: {fileID: 100100000, guid: e11f20ef6b9639b4b811c8a9ffa41cb1, type: 3}
 --- !u!224 &998062009 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: e11f20ef6b9639b4b811c8a9ffa41cb1, type: 3}
   m_PrefabInstance: {fileID: 998062008}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &998062010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: e11f20ef6b9639b4b811c8a9ffa41cb1, type: 3}
+  m_PrefabInstance: {fileID: 998062008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &998062011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998062010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 998062013}
+  glitchSprite: {fileID: 21300000, guid: bd95704fd8b21404da39554c223285d8, type: 3}
+  baseSprite: {fileID: 21300000, guid: 5285fd6d2a775d547817800561072fb6, type: 3}
+--- !u!114 &998062013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: e11f20ef6b9639b4b811c8a9ffa41cb1, type: 3}
+  m_PrefabInstance: {fileID: 998062008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998062010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &998062015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998062010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 998062011}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 998062011}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1252934489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,13 +2105,90 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 9ad01bcc81031094f814b21144b3ad9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1488022800}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 9ad01bcc81031094f814b21144b3ad9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1488022801}
   m_SourcePrefab: {fileID: 100100000, guid: 9ad01bcc81031094f814b21144b3ad9a, type: 3}
 --- !u!224 &1488022796 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: 9ad01bcc81031094f814b21144b3ad9a, type: 3}
   m_PrefabInstance: {fileID: 1488022795}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1488022798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: 9ad01bcc81031094f814b21144b3ad9a, type: 3}
+  m_PrefabInstance: {fileID: 1488022795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896561589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1488022800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896561589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1488022798}
+  glitchSprite: {fileID: 21300000, guid: 8255ecca7b9540f4aa39c3c25dbfde7e, type: 3}
+  baseSprite: {fileID: 21300000, guid: 012147d1bf777454fa5859068554dad2, type: 3}
+--- !u!114 &1488022801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896561589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1488022800}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1488022800}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1554756299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,7 +2604,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 03934ac6486d01f49a9a85f5d828b22f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134531687}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 03934ac6486d01f49a9a85f5d828b22f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134531688}
   m_SourcePrefab: {fileID: 100100000, guid: 03934ac6486d01f49a9a85f5d828b22f, type: 3}
 --- !u!224 &1711547816 stripped
 RectTransform:
@@ -2316,7 +2732,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 08646b16fd21635419b22fd85d06dc62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2101067986}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: 08646b16fd21635419b22fd85d06dc62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2101067987}
   m_SourcePrefab: {fileID: 100100000, guid: 08646b16fd21635419b22fd85d06dc62, type: 3}
 --- !u!224 &1761068697 stripped
 RectTransform:
@@ -2884,13 +3306,95 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: aa3b1f479141cdd49be2af90e0a81875, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970509713}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: aa3b1f479141cdd49be2af90e0a81875, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970509717}
   m_SourcePrefab: {fileID: 100100000, guid: aa3b1f479141cdd49be2af90e0a81875, type: 3}
 --- !u!224 &1970509711 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: aa3b1f479141cdd49be2af90e0a81875, type: 3}
   m_PrefabInstance: {fileID: 1970509710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1970509712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: aa3b1f479141cdd49be2af90e0a81875, type: 3}
+  m_PrefabInstance: {fileID: 1970509710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1970509713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970509712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1970509715}
+  glitchSprite: {fileID: 21300000, guid: 125c7a77cc3c2744c9062394376807a3, type: 3}
+  baseSprite: {fileID: 21300000, guid: 1469ba34e50a2604c8dbb7da4d8d9a9d, type: 3}
+--- !u!114 &1970509715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: aa3b1f479141cdd49be2af90e0a81875, type: 3}
+  m_PrefabInstance: {fileID: 1970509710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970509712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1970509717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970509712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1970509713}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1970509713}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1996603210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,13 +3690,95 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: f361aecd4fe8dac458f96031c03b3cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2090013808}
+    - targetCorrespondingSourceObject: {fileID: 30358087643066324, guid: f361aecd4fe8dac458f96031c03b3cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2090013812}
   m_SourcePrefab: {fileID: 100100000, guid: f361aecd4fe8dac458f96031c03b3cc2, type: 3}
 --- !u!224 &2090013806 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3770388908449381534, guid: f361aecd4fe8dac458f96031c03b3cc2, type: 3}
   m_PrefabInstance: {fileID: 2090013805}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2090013807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: f361aecd4fe8dac458f96031c03b3cc2, type: 3}
+  m_PrefabInstance: {fileID: 2090013805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2090013808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090013807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2090013810}
+  glitchSprite: {fileID: 21300000, guid: 82dce162c32e7f74d9201ed4f7735190, type: 3}
+  baseSprite: {fileID: 21300000, guid: 30c338df8c778994883355abb2189c68, type: 3}
+--- !u!114 &2090013810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: f361aecd4fe8dac458f96031c03b3cc2, type: 3}
+  m_PrefabInstance: {fileID: 2090013805}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090013807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2090013812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090013807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2090013808}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2090013808}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2100747817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3913,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100747817}
   m_CullTransparentMesh: 1
+--- !u!1 &2101067982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: 08646b16fd21635419b22fd85d06dc62, type: 3}
+  m_PrefabInstance: {fileID: 1761068696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2101067984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: 08646b16fd21635419b22fd85d06dc62, type: 3}
+  m_PrefabInstance: {fileID: 1761068696}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101067982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2101067986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101067982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2101067984}
+  glitchSprite: {fileID: 21300000, guid: 3a7babff13a4ace43b0c41bd3dd86b44, type: 3}
+  baseSprite: {fileID: 21300000, guid: 762b3f8253824864d82b4005dcd22dd4, type: 3}
+--- !u!114 &2101067987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101067982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2101067986}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2101067986}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2120025153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3460,6 +4122,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120025153}
   m_CullTransparentMesh: 1
+--- !u!1 &2134531683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 30358087643066324, guid: 03934ac6486d01f49a9a85f5d828b22f, type: 3}
+  m_PrefabInstance: {fileID: 1711547815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134531685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208650486735592463, guid: 03934ac6486d01f49a9a85f5d828b22f, type: 3}
+  m_PrefabInstance: {fileID: 1711547815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134531683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2134531687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134531683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55dbcb524f770647aceb72bf7380f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2134531685}
+  glitchSprite: {fileID: 21300000, guid: 735acb08444a16245bc37a9b67663aad, type: 3}
+  baseSprite: {fileID: 21300000, guid: e1776838ab1391142bba3d147c65ee46, type: 3}
+--- !u!114 &2134531688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134531683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2134531687}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToGlitchingSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2134531687}
+          m_TargetAssemblyTypeName: SpriteController, Assembly-CSharp
+          m_MethodName: ChangeToBaseSprite
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
