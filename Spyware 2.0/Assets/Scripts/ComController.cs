@@ -21,7 +21,6 @@ public class ComController : MonoBehaviour
     {
         if (id == 2 || id == 3 || id == 4)
         {
-            //Debug.Log("pickCard function...");
             cardindex = UnityEngine.Random.Range(0, 2);
 
             currentComHand = CardManager.instance.currentPlayerHands[id];
@@ -36,12 +35,10 @@ public class ComController : MonoBehaviour
         currentComHand = CardManager.instance.currentPlayerHands[id];
 
         winningCard = currentComHand[cardindex];
-        //Debug.Log("Com: " + id + "Chose winning card to: " + winningCard);
     }
 
     public void ComTurn()
     {
-        //Debug.Log("in ComTurn...");
         if (winningCard == -1)
         {
             PickWinningCard();
@@ -49,9 +46,8 @@ public class ComController : MonoBehaviour
 
         PickCard();
 
-        //Debug.Log("Random picked card number: " + cardindex);
-
         playerController = FindAnyObjectByType<PlayerController>();
         playerController.PlayerTurn(id, winningCard, comCanWin, passCard);
     }
+
  }

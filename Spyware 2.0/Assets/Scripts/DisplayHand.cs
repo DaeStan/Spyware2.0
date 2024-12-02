@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using Unity.VisualScripting;
 
 public class DisplayHand : MonoBehaviour
@@ -10,15 +11,21 @@ public class DisplayHand : MonoBehaviour
     string cardPrefabName;
     GameObject playerCanvas;
     GameObject cardDeck;
-    //GameObject comButton2;
-    //GameObject comButton3;
-    //GameObject comButton4;
-
-    //GameObject dealCardsButton;
-    //GameObject clearCardskButton;
 
     public TextMeshProUGUI IdCounter;
     int currentPlayerIdCounnter =  0;
+
+    public Image com1Image;
+    public Sprite com1GlitchSprite;
+    public Sprite com1BaseSprite;
+
+    public Image com2Image;
+    public Sprite com2GlitchSprite;
+    public Sprite com2BaseSprite;
+
+    public Image com3Image;
+    public Sprite com3GlitchSprite;
+    public Sprite com3BaseSprite;
 
     public static DisplayHand instance;
     void Awake()
@@ -29,27 +36,12 @@ public class DisplayHand : MonoBehaviour
     {
         playerCanvas = GameObject.Find("PlayerScreen");
         cardDeck = GameObject.Find("Deck");
-       // comButton2 = GameObject.Find("COMButton2");
-        //comButton3 = GameObject.Find("COMButton3");
-        //comButton4 = GameObject.Find("COMButton4");
-
-        //clearCardskButton = GameObject.Find("ClearCardsButton");
-       // dealCardsButton = GameObject.Find("DealCardsButton");
-
-
-        //Checking to make sure there is the correct number of cards in the playerHand
-        //if (playerHand.Length > 3) 
-        //{
-            //Debug.Log("*********************Too many cards in playerHand*******************************");
-        //}
 
         //clearing cards 
         for (int i = 0; i < 3; i++)
         {
             foreach (Transform child in playerCanvas.transform)
             {
-                //Debug.Log("----------------------------------number of children of canvas: " + playerCanvas.transform.childCount);
-                //Debug.Log("----------------------------------child of canvas: " + child.name);
                 if (child.name.Contains("card"))
                 {
                     child.transform.SetParent(cardDeck.transform, true);
@@ -60,8 +52,6 @@ public class DisplayHand : MonoBehaviour
         for (int i = 0; i < playerHand.Length; i++)
         {
             cardNumber = playerHand[i];
-
-            //Debug.Log("inDisplayFunction: " + cardNumber);
             foreach (KeyValuePair<string, int> kvp in deck)
             {
                 if (kvp.Value == cardNumber)
@@ -81,7 +71,30 @@ public class DisplayHand : MonoBehaviour
         {
             currentPlayerIdCounnter++;
         }
-        IdCounter.text = currentPlayerIdCounnter.ToString();
+
+        ActiveComTurnSpriteChange();
+    }
+
+    void ActiveComTurnSpriteChange()
+    {
+        if (currentPlayerIdCounnter == 1)
+        {
+            com3Image.sprite = com3BaseSprite;
+        }
+        if (currentPlayerIdCounnter == 2)
+        {
+            com1Image.sprite = com1GlitchSprite;
+        }
+        if (currentPlayerIdCounnter == 3)
+        {
+            com1Image.sprite = com1BaseSprite;
+            com2Image.sprite = com2GlitchSprite;
+        }
+        if (currentPlayerIdCounnter == 4)
+        {
+            com2Image.sprite = com2BaseSprite;
+            com3Image.sprite = com3GlitchSprite;
+        }
     }
 
     public void ClearCards()
@@ -100,13 +113,6 @@ public class DisplayHand : MonoBehaviour
                 }
             }
         }
-
-        //comButton2.transform.SetParent(playerCanvas.transform, true);
-        //comButton3.transform.SetParent(playerCanvas.transform, true);
-        //comButton4.transform.SetParent(playerCanvas.transform, true);
-        //IdCounter.transform.SetParent(playerCanvas.transform, true);
-        //dealCardsButton.transform.SetParent(playerCanvas.transform, true);
-        //clearCardskButton.transform.SetParent(playerCanvas.transform, true);
     }
 
     public void RedealCards(int[] playerHand, Dictionary<string, int> deck)

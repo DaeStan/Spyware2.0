@@ -25,7 +25,7 @@ public class CardManager : MonoBehaviour
 
     public Dictionary<string, int> cards =
         new Dictionary<string, int>() {
-    {"1card", 1 }, {"2card", 2} , {"3card", 3} , {"4card", 4} , {"5card", 5},
+        {"1card", 1 }, {"2card", 2} , {"3card", 3} , {"4card", 4} , {"5card", 5},
         {"6card", 6}, {"7card", 7}, {"8card", 8}, {"9card", 9}
         };
 

@@ -8,17 +8,11 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     public int id;
-
     bool canWin = false;
-
     int cardPlayed;
-
     int[] currentPlayerHand;
-
     int winningCard = -1;
-
     int nextPlayer = 1;
-
     int comCard = 0;
 
     void CheckForWinningCondition()
@@ -37,20 +31,12 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerTurn(int currentPlayerId, int currentPlayerWinningCard, bool currentPlayerWinCondtion, int comPassCard)
     {
-        //Debug.Log("-----------------------------------------------Current Player Id: " + currentPlayerId);
-        //Debug.Log("-----------------------------------------------Next Player Id: " + nextPlayer);
-
         //checks if players turn
         if (nextPlayer != currentPlayerId) { return; }
         
 
         string selectedCard = EventSystem.current.currentSelectedGameObject.name;
         currentPlayerHand = CardManager.instance.currentPlayerHands[1];
-
-        //Debug.Log("Click Worked");
-        //Debug.Log("Current Player ID: " + currentPlayerId);
-        //Debug.Log(currentPlayerId + ": " + selectedCard);
-
 
         //checks for first turn
         if (currentPlayerWinningCard == -1)
@@ -61,9 +47,6 @@ public class PlayerController : MonoBehaviour
                 winningCard = (int)Char.GetNumericValue(selectedCard[0]);
 
             }
-
-            //Debug.Log("this is the first turn player 1 may start...");
-            //Debug.Log("Player " + currentPlayerId + " choose as winning card: " + winningCard);
             return;
         }
 
@@ -88,11 +71,8 @@ public class PlayerController : MonoBehaviour
             cardPlayed = comPassCard;
         }
 
-        //Debug.Log("PlayerTurn Id: " + currentPlayerId);
         nextPlayer = CardManager.instance.PassCard(currentPlayerId, cardPlayed);
         currentPlayerId = nextPlayer;
-        //Debug.Log("Next Player id: " + currentPlayerId);
-
 
         CheckForWinningCondition();
     }
