@@ -19,9 +19,16 @@ public class ComController : MonoBehaviour
 
     public void PickCard()
     {
-        if (id == 2 || id == 3 || id == 4)
+        if (id == 2 || id == 4)
         {
             cardindex = UnityEngine.Random.Range(0, 2);
+
+            currentComHand = CardManager.instance.currentPlayerHands[id];
+            passCard = currentComHand[cardindex];
+        }
+        if (id == 3)
+        {
+            cardindex = UnityEngine.Random.Range(1, 2);
 
             currentComHand = CardManager.instance.currentPlayerHands[id];
             passCard = currentComHand[cardindex];

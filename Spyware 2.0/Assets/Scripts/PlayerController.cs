@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     int nextPlayer = 1;
     int comCard = 0;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+
     void CheckForWinningCondition()
     {
 
@@ -56,7 +59,17 @@ public class PlayerController : MonoBehaviour
             if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
             {
                 Debug.Log("Player " + currentPlayerId + " has WON!!!!!!!!!!!!!!!!!!!!!!");
+                //DisplayHand.instance.ClearCards();
+                //add lose screen
+                if (currentPlayerId != 1)
+                {
+                    loseScreen.SetActive(true);
+                }
                 //add win screen
+                else
+                {
+                    winScreen.SetActive(true);
+                }
             }
         }
 

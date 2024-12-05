@@ -12,7 +12,6 @@ public class DisplayHand : MonoBehaviour
     GameObject playerCanvas;
     GameObject cardDeck;
 
-    public TextMeshProUGUI IdCounter;
     int currentPlayerIdCounnter =  0;
 
     public Image com1Image;
