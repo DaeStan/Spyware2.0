@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
@@ -58,8 +59,8 @@ public class PlayerController : MonoBehaviour
         {
             if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
             {
-                Debug.Log("Player " + currentPlayerId + " has WON!!!!!!!!!!!!!!!!!!!!!!");
-                //DisplayHand.instance.ClearCards();
+                //add way to clear cards and stop game
+                DisplayHand.instance.ClearCards();
                 //add lose screen
                 if (currentPlayerId != 1)
                 {

@@ -53,6 +53,11 @@ public class ComController : MonoBehaviour
 
         PickCard();
 
+        if (comCanWin == false &&  winningCard == passCard)
+        {
+            comCanWin = true;
+        }
+
         playerController = FindAnyObjectByType<PlayerController>();
         playerController.PlayerTurn(id, winningCard, comCanWin, passCard);
     }
