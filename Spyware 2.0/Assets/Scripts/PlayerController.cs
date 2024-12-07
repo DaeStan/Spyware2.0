@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public GameObject winScreen;
     public GameObject loseScreen;
 
+    public AudioSource source;
+    public AudioClip notification;
+
     void CheckForWinningCondition()
     {
 
@@ -31,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public void ClickedCard()
     {
         PlayerTurn(id, winningCard, canWin, comCard);
+        source.clip = notification;
+        source.Play();
     }
 
     public void PlayerTurn(int currentPlayerId, int currentPlayerWinningCard, bool currentPlayerWinCondtion, int comPassCard)
@@ -59,8 +64,9 @@ public class PlayerController : MonoBehaviour
         {
             if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
             {
+                currentPlayerId = 0;
                 //add way to clear cards and stop game
-                DisplayHand.instance.ClearCards();
+
                 //add lose screen
                 if (currentPlayerId != 1)
                 {

@@ -10,8 +10,11 @@ public class ComController : MonoBehaviour
     public int cardindex;
 
     bool comCanWin = false;
-    int comCardPlayed;
     int[] currentComHand;
+
+    public AudioSource source;
+    public AudioClip error;
+    public AudioClip glitching;
 
     int passCard;
 
@@ -46,6 +49,16 @@ public class ComController : MonoBehaviour
 
     public void ComTurn()
     {
+        if (cardindex % 2 == 0)
+        {
+            source.clip = glitching;
+        }
+        else
+        {
+            source.clip = error;
+        }
+        source.Play();
+
         if (winningCard == -1)
         {
             PickWinningCard();

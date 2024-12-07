@@ -33,7 +33,7 @@ public class DisplayHand : MonoBehaviour
     }
     public void DisplayPLayerHand(int[] playerHand, Dictionary<string, int> deck)
     {
-        playerCanvas = GameObject.Find("PlayerScreen");
+        playerCanvas = GameObject.Find("Holding");
         cardDeck = GameObject.Find("Deck");
 
         //clearing cards 
@@ -104,8 +104,6 @@ public class DisplayHand : MonoBehaviour
         {
             foreach (Transform child in playerCanvas.transform)
             {
-                Debug.Log("----------------------------------number of children of canvas: " + playerCanvas.transform.childCount);
-                Debug.Log("----------------------------------child of canvas: " + child.name);
                 if (child.name.Contains("card"))
                 {
                     child.transform.SetParent(cardDeck.transform, true);

@@ -10,8 +10,14 @@ public class GameManager : MonoBehaviour
     public GameObject winScreen;
     public GameObject loseScreen;
     public GameObject ruleScreen;
+    public GameObject blueScreen;
 
     public int ruleCounter = 1;
+
+    public AudioSource source;
+    public AudioClip error;
+    public AudioClip fans;
+    public AudioClip glitching;
 
     public void StartButton()
     {
@@ -29,9 +35,26 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void CancelButton()
+    {
+        source.clip = fans;
+        source.Play();
+
+        loseScreen.SetActive(false);
+        blueScreen.SetActive(true);
+    }
+
+    public void RestartButton()
+    {
+        OkButton();
+    }
+
     public void RulesButton()
     {
         ruleScreen.SetActive(true);
+        source.clip = error;
+
+        source.Play();
     }
 
     public void RulesOkButton()
