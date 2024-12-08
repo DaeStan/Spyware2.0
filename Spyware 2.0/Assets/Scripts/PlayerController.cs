@@ -64,8 +64,8 @@ public class PlayerController : MonoBehaviour
         {
             if (currentPlayerHand[i] == currentPlayerWinningCard && currentPlayerWinCondtion == true)
             {
+                //game has ended no one can play 
                 currentPlayerId = 0;
-                //add way to clear cards and stop game
 
                 //add lose screen
                 if (currentPlayerId != 1)

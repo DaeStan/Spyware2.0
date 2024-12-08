@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public AudioSource source;
     public AudioClip error;
     public AudioClip fans;
-    public AudioClip glitching;
 
     public void StartButton()
     {
@@ -59,6 +58,8 @@ public class GameManager : MonoBehaviour
 
     public void RulesOkButton()
     {
+        startMenu.SetActive(false);
+
         foreach (Transform child in ruleScreen.transform)
         {
             if (child.name.Contains(ruleCounter.ToString()))
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (ruleCounter == 8)
+        if (ruleCounter == 9)
         {
             ruleScreen.SetActive(false);
             startMenu?.SetActive(true);
