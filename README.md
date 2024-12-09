@@ -7,4 +7,7 @@ Playable game loop complete... <br />
 Added a  few new UI elements...<br />
 Added sound effects...<br />
 Fix UI placement issues...<br />
-
+<br />
+<br />
+<br />
+Assistance with bug fixing from Gavin Stanifer...<br />
